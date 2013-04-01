@@ -1,0 +1,245 @@
+@import 'reset.less';
+@import 'mixins.less';
+@import 'defaults.less';
+
+body {
+	background: url('/internal/images/bg-landing2.jpg') repeat center top;
+	font-family: 'Droid Sans', Helvetica, sans-serif;
+}
+#LandingTop {
+	margin: 4% 15% 5em;
+	float: left;
+	width: 70%;
+	text-align: center;
+}
+.landing_logo {
+	width: 50%;
+	margin-bottom: 5em;
+	margin-left: 25%;
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+#LandingLogin {
+	width: 50%;
+	float: left;
+	clear: left;
+	margin: 0 25%;
+	text-align: center;
+}
+h1 {
+	font-size: 72px;
+	line-height: 76px;
+	color: @txtcolor;
+} 
+h2 {
+	font-size: 22px;
+	line-height: 26px;
+	margin: 0.5em 0;
+	color: #999;
+	font-weight: 400;
+	#navbar-login {
+		color: @lightblue;
+		&:hover {
+			color: @darkblue;
+		}
+	}
+}
+.signup_buttons {
+	width: 400px;
+	height: 50px;
+	margin: 2em auto;
+}
+.signup_button {
+	width: 170px;
+	height: 50px;
+	background-color: @green;
+	border-radius: 3px;
+	.transition(background-color 150ms);
+	&:hover {
+		background-color: @darkgreen;
+		.transition(background-color 250ms);
+	}
+	a {
+		width: 100%;
+		height: 100%;
+		display: block;
+		color: #fff;
+		font-size: 18px;
+		line-height: 50px;
+		font-weight: 500;
+	}
+	&#ListenerSignup {
+		float: left;
+		margin-left: 4%;
+	}
+	&#ArtistSignup {
+		float: right;
+		margin-right: 4%;
+	}
+}
+
+#LandingFooter {
+	floar: left;
+	clear: left;
+	width: 90%;
+	margin: 30px 5% 0;
+	h3 {
+		float: left;
+		width: 40%;
+		margin-left: 30%;
+		text-align: center;
+		a {
+			color: @lightblue;
+			font-size: 14px;
+			font-weight: 400;
+		}
+	}
+	p {
+		float: right;
+		color: #aaa;
+		margin-top: 10px;
+	}
+}
+#LoginForm {
+	float: left;
+	clear: left;
+	height: 0;
+	overflow: hidden;
+	width: 100%;
+}
+.well {
+	float: left;
+	clear: left;
+	width: 100%;
+	margin-top: 21px;
+	height: 79%;
+	background-color: @green;
+	position: relative;
+	box-shadow: inset 0px 1px 5px 1px @darkgreen;
+	z-index: 2;
+	&:before{
+		top: -14px;
+		left: 50%;
+		margin-left: -15px;
+		content: " ";
+		width: 30px;
+		height: 30px;
+		position: absolute;
+		pointer-events: none;
+		box-shadow: inset 0px 0px 4px 2px @darkgreen;
+		background-color: @green;
+		-webkit-transform: rotate(45deg);
+		z-index: 1;
+		-webkit-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+	&:after {
+		top: 1px;
+		border: solid transparent;
+		content: " ";
+		height: 0;
+		width: 0;
+		position: absolute;
+		pointer-events: none;
+		border-color: rgba(136, 183, 213, 0);
+		border-top-color: @green;
+		border-width: 20px;
+		border-top-width: 40px;
+		left: 50%;
+		margin-left: -20px;
+		z-index: 3;
+	}
+}
+#login_name, #login_password {
+	float: left;
+	width: 25%;
+	height: 32px;
+	line-height: 26px;
+	margin-top: 30px;
+	outline: none;
+}
+#login_name {
+	margin-left: 22.5%;
+}
+#login_password {
+	margin-left: 5%;
+}
+#login-button {
+	float: left;
+	border-radius: 4px;
+	margin-top: 30px;
+	margin-left: 2%;
+	height: 32px;
+	width: 60px;
+	background-color: #eee;
+	border: none;
+	color: #666;
+	font-size: 16px;
+	font-weight: 400;
+	box-shadow: 0 0 20px -2px @darkgreen;
+	.transition(background-color 150ms);
+	&:hover {
+		background-color: #ddd;
+		.transition(background-color 250ms);
+	}
+}
+
+@media screen and (max-width: 1023px) {
+	#LandingTop {
+		margin: 8% 5% 5em;
+		width: 90%;
+	}
+	.landing_logo {
+		width: 46%;
+		margin-left: 27%;
+	}
+	#LandingLogin {
+		width: 100%;
+		margin: 0 auto 30px;
+	}
+}
+@media screen and (max-width: 580px) {
+	h1 {
+		font-size: 56px;
+		line-height: 66px;
+	}
+	#login_name, #login_password {
+		clear: left;
+		width: 80%;
+		margin-top: 8px;
+		height: 45px;
+		margin-left: 10%;
+	}
+	#login_name {
+		margin-top: 42px;
+	}
+	#login-button {
+		clear: left;
+		width: 30%;
+		margin-left: 33.33%;
+		margin-top: 8px;
+		height: 38px;
+		line-height: 38px;
+		font-size: 18px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.landing_logo {
+		width: 70%;
+		margin-left: 15%;
+	}
+	.signup_buttons {
+		width: 100%;
+		height: 120px;
+		margin: 0 auto;
+	}
+	.signup_button {
+		float: left !important;
+		width: 80%;
+		margin: 10px 0 0 10% !important;
+	}
+}

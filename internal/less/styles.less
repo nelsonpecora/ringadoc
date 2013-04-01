@@ -1,0 +1,25 @@
+/*
+	This is the master stylesheet that Busker uses. It compiles to /internal/css/styles.css, so we only serve one css file. The reset and other .less files are imported in cascading order, and some inherit from previous files. Here's the breakdown:
+
+	Reset: contains css resets and normalize.css rules.
+	Desktop: ~1024px default layout. Used for most browsers and iPad landscape view.
+	Widescreen: ~1280px layout. Fixes for large browsers.
+	Tablet: ~768px layout. Used for iPad portrait view and other tablets.
+	Phone: ~320px layout. Used for phones and 7" tablets.
+
+	- Width values should be proportional (to be somewhat fluid with non-breakpoint viewport sizes), but make sure lines don't wrap weirdly.
+	- Everything inherits reset and desktop styles.
+	- Phone inherits tablet styles, since there's overlap.
+	- There is currently no print stylesheet.
+*/
+
+@import 'reset.less';
+
+@import 'mixins.less';
+
+@import 'defaults.less';
+
+@import 'desktop.less';
+@import 'widescreen.less';
+@import 'tablet.less';
+@import 'phone.less';
