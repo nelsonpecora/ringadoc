@@ -1,0 +1,934 @@
+/*
+	This is the master stylesheet. It compiles to /internal/css/styles.css, so we only serve one css file. The reset and other .less files are imported in cascading order, and some inherit from previous files. Here's the breakdown:
+
+	Reset: contains css resets and normalize.css rules.
+	Desktop: ~1024px default layout. Used for most browsers and iPad landscape view.
+	Widescreen: ~1280px layout. Fixes for large browsers.
+	Tablet: ~768px layout. Used for iPad portrait view and other tablets.
+	Phone: ~320px layout. Used for phones and 7" tablets.
+
+	- Width values should be proportional (to be somewhat fluid with non-breakpoint viewport sizes), but make sure lines don't wrap weirdly.
+	- Everything inherits reset and desktop styles.
+	- Phone inherits tablet styles, since there's overlap.
+	- There is currently no print stylesheet.
+*/
+/*
+	Margin, padding, and border resets
+	except for form elements
+*/
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+th,
+td,
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+/*
+	Consistency fixes
+	minified from normalize.css v2.0.1
+*/
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden] {
+  display: none;
+}
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+a:focus {
+  outline: thin dotted;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+h1 {
+  font-size: 2em;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 0;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  border: 0;
+  padding: 0;
+}
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+button,
+input {
+  line-height: normal;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* 
+	Clearfix
+*/
+.clearfix:after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  font-size: 0;
+}
+/* border-box reset */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* This file contains LESS mixins and functions compiled from various sources */
+/* Default Color, Type, Selection, Image, Form, and Link Styles */
+/* import fonts */
+/*
+@font-face {
+	font-family: 'Agenda';
+	font-weight: 500;
+	src: url('/external/fonts/Agenda\ Medium.TTF');
+}
+@font-face {
+	font-family: 'Agenda';
+	font-weight: 700;
+	src: url('/external/fonts/Agenda\ Bold.TTF');
+} */
+/* Color Presets */
+/* Selection and tap colors */
+::selection {
+  background: #eee;
+  color: white;
+}
+::-moz-selection {
+  background: #eee;
+  color: white;
+}
+img::selection {
+  background: transparent;
+}
+img::-moz-selection {
+  background: transparent;
+}
+body {
+  -webkit-tap-highlight-color: rgba(200, 200, 200, 0.62);
+}
+/* Typography Presets */
+h1,
+h2,
+h3,
+h4 {
+  text-rendering: optimizelegibility;
+}
+.huge {
+  font-size: 50px;
+  line-height: 60px;
+  font-weight: 500;
+}
+h1 {
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+h2 {
+  font-size: 34px;
+  line-height: 40px;
+  font-weight: 600;
+}
+h3 {
+  font-size: 22px;
+  line-height: 27px;
+  font-weight: 600;
+  text-align: center;
+}
+h4 {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+}
+body {
+  font: 18px/26px 'Source Sans Pro', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  color: #222222;
+}
+.small {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+}
+.baskerville {
+  font-family: 'Baskerville', serif;
+  font-style: italic;
+  font-size: 110%;
+}
+.grey_text {
+  color: #555656;
+}
+.darkgrey_text {
+  color: #555656;
+}
+a,
+a:active,
+a:visited {
+  color: #2c9ce6;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition: color 150ms;
+  -moz-transition: color 150ms;
+  -ms-transition: color 150ms;
+  -o-transition: color 150ms;
+  transition: color 150ms;
+}
+a:hover {
+  color: #00699e;
+  -webkit-transition: color 250ms;
+  -moz-transition: color 250ms;
+  -ms-transition: color 250ms;
+  -o-transition: color 250ms;
+  transition: color 250ms;
+}
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+  border: 0;
+}
+/*
+*   Desktop Stylesheet: ~1024px wide (proportional).
+*   Will display in viewports between 1024px and 1279px wide. */
+body {
+  background-color: #e9e8e7;
+  position: relative;
+}
+.white_bg {
+  background-color: #ffffff;
+}
+.button {
+  position: relative;
+  width: 232px;
+  height: 44px;
+}
+.button a,
+.button a:active,
+.button a:visited {
+  display: block;
+  border: 3px solid #222222;
+  background-color: #ffffff;
+  color: #222222;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 4px 15px;
+  width: 226px;
+  height: 34px;
+  line-height: 20px;
+  text-align: center;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  box-shadow: 0px 0px 1px #222222, 1px 1px 1px #222222, 2px 2px 1px #222222, 3px 3px 1px #222222, 4px 4px 1px #222222, 5px 5px 1px #222222, 6px 6px 1px #222222, 7px 7px 1px #222222, 8px 8px 1px #222222;
+  -webkit-transition: all 100ms linear;
+  -moz-transition: all 100ms linear;
+  -ms-transition: all 100ms linear;
+  -o-transition: all 100ms linear;
+  transition: all 100ms linear;
+}
+.button a:hover,
+.button a:active:hover,
+.button a:visited:hover {
+  color: #222222;
+  transform: translate3d(5px, 5px, 0);
+  -moz-transform: translate3d(5px, 5px, 0);
+  -webkit-transform: translate3d(5px, 5px, 0);
+  box-shadow: 0px 0px 1px #222222, 1px 1px 1px #222222, 2px 2px 1px #222222, 3px 3px 1px #222222;
+  -webkit-transition: all 100ms linear;
+  -moz-transition: all 100ms linear;
+  -ms-transition: all 100ms linear;
+  -o-transition: all 100ms linear;
+  transition: all 100ms linear;
+}
+.header_bg {
+  position: absolute;
+  width: 100%;
+  height: 480px;
+  background-color: #0097F4;
+  z-index: -1;
+}
+.page_header {
+  width: 80%;
+  margin: 0 auto;
+}
+.page_header .page_logo {
+  float: left;
+  margin-top: 30px;
+}
+.page_header .login_link {
+  float: right;
+  margin-top: 60px;
+  text-transform: uppercase;
+}
+.page_header .login_link a {
+  color: #222222;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+.page_header .login_link a:hover {
+  color: #555656;
+}
+.page_header .header_blurb {
+  margin-top: 50px;
+  color: #ffffff;
+}
+.page_header .header_blurb .header_blurb_left {
+  float: left;
+  width: 70%;
+}
+.page_header .header_blurb p {
+  font-size: 17px;
+  line-height: 25px;
+}
+.page_header .header_blurb .button {
+  float: right;
+  margin-top: 16px;
+}
+.popover {
+  background: url('/internal/img/stage.png') no-repeat center top;
+  background-size: 100%;
+  width: 100%;
+  max-width: 989px;
+  max-height: 314px;
+  margin: 30px auto;
+  position: relative;
+}
+.popover p {
+  color: #ffffff;
+  position: absolute;
+  top: 44%;
+  left: 4%;
+  width: 70%;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 500;
+}
+.popover .button {
+  top: 58%;
+  left: 8%;
+}
+.red_banner {
+  position: absolute;
+  top: 20%;
+  left: -30px;
+  width: 270px;
+  height: 40px;
+  background-color: #eb0000;
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: 500;
+  text-align: center;
+}
+.red_banner:before {
+  content: " ";
+  border-top: 10px solid #CC0202;
+  position: absolute;
+  bottom: -10px;
+  border-left: 31px solid transparent;
+  left: 0;
+}
+#HappyPatients {
+  width: 80%;
+  margin: 0 auto;
+  padding: 40px 30px;
+}
+#HappyPatients h2 {
+  width: 100%;
+  float: left;
+}
+#HappyPatients img {
+  float: left;
+  width: 40%;
+  margin: 30px 5% 0;
+}
+#HappyPatients div {
+  float: right;
+  width: 45%;
+  margin: 30px 5% 15px 0;
+}
+#HappyPatients div.quote {
+  background-color: #EFF2F7;
+  border-radius: 10px;
+  position: relative;
+  padding: 20px;
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: 500;
+}
+#HappyPatients div.quote:after {
+  content: " ";
+  border-top: 15px solid #EFF2F7;
+  position: absolute;
+  bottom: -15px;
+  border-right: 25px solid transparent;
+  right: 25%;
+}
+#HappyPatients div.quote_attrib {
+  margin-top: 0;
+  margin-right: 22%;
+  clear: right;
+  width: auto;
+  color: #dddddd;
+  font-size: 16px;
+  line-height: 16px;
+}
+#Features {
+  width: 80%;
+  margin: 40px auto;
+  padding: 0 3%;
+  position: auto;
+}
+#Features > h2 {
+  float: left;
+}
+.feature {
+  float: left;
+  clear: left;
+  margin-top: 40px;
+}
+.feature img {
+  float: left;
+  width: 35%;
+}
+.feature .feature_desc {
+  float: right;
+  clear: right;
+  width: 65%;
+}
+.feature h2 {
+  margin-top: 60px;
+}
+.feature p {
+  font-size: 21px;
+  line-height: 27px;
+  margin-top: 20px;
+}
+.feature .button {
+  margin-top: 20px;
+}
+.feature#DesktopApp img {
+  width: 45%;
+}
+.feature#DesktopApp .feature_desc {
+  width: 55%;
+  margin-top: 50px;
+}
+.feature#PhoneCall img {
+  width: 40%;
+}
+.feature#PhoneCall .feature_desc {
+  width: 60%;
+  margin-top: 30px;
+}
+.bordered_section {
+  border-top: 2px solid #222222;
+  border-bottom: 2px solid #222222;
+  width: 80%;
+  margin: 30px auto;
+  padding: 20px 3%;
+}
+.thin {
+  width: 70%;
+  margin: 20px auto 30px;
+}
+.flex_left {
+  float: left;
+  width: 60%;
+}
+#SetupIsEasy .flex_left {
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+#SetupIsEasy h3 {
+  float: left;
+  clear: left;
+  text-align: left;
+  margin-bottom: 25px;
+  font-size: 27px;
+  line-height: 30px;
+}
+#SetupIsEasy h3 a {
+  font-weight: 700;
+}
+#SetupIsEasy img {
+  float: right;
+  width: 30%;
+  margin-top: -10px;
+}
+#SetupIsEasy p {
+  clear: both;
+  width: 80%;
+  margin: 0 auto 40px;
+  font-size: 17px;
+  line-height: 27px;
+  font-weight: 600;
+}
+#PlaybackOptions {
+  width: 78%;
+  margin: 20px auto;
+}
+#PlaybackOptions p {
+  font-size: 21px;
+  line-height: 27px;
+  font-weight: 500;
+  margin: 20px 0;
+}
+#PlaybackOptions img {
+  width: 90%;
+  max-width: 590px;
+  max-height: 408px;
+  margin: 0 auto;
+  display: block;
+}
+#RespondAccordingly {
+  text-align: center;
+}
+.table_simple {
+  margin: 20px 0;
+}
+.table_simple th {
+  background-color: #2c9ce6;
+  font-size: 29px;
+  line-height: 36px;
+  font-weight: 500;
+  padding: 4px;
+  color: #222222;
+}
+.table_simple td {
+  background-color: #ffffff;
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 25px;
+  padding: 8px;
+  color: #555656;
+}
+#Features2 {
+  width: 80%;
+  margin: 40px auto;
+}
+#Features2 .small {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+}
+#Features2 .features2_top_wrap {
+  width: 100%;
+  position: relative;
+}
+#Features2 .features2_header {
+  width: 40%;
+  text-align: left;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+#Features2 .table_img_wrap {
+  width: 18%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+}
+#Features2 .table_img_wrap img {
+  display: block;
+  margin: 0 auto;
+}
+#Features2 .table_img_wrap p {
+  margin-top: 10px;
+}
+#Features2 #PhoneImgWrap {
+  left: 46%;
+}
+#Features2 #MobileImgWrap {
+  left: 64%;
+}
+#Features2 #MonitorImgWrap {
+  float: right;
+  position: relative;
+}
+.alternating_table {
+  width: 100%;
+  margin: 20px auto;
+  background-color: #ffffff;
+}
+.alternating_table tr {
+  height: 50px;
+  line-height: 50px;
+  font-size: 17px;
+  color: #86898b;
+  font-weight: 500;
+}
+.alternating_table tr td {
+  width: 18%;
+  text-align: center;
+}
+.alternating_table tr td:first-child {
+  width: 46%;
+  padding-left: 20px;
+  text-align: left;
+}
+.alternating_table tr:nth-of-type(2n-1) {
+  background-color: #F5F5F5;
+}
+#UnlimitedSupport {
+  width: 90%;
+  margin: 40px auto;
+}
+#UnlimitedSupport h3 {
+  text-align: left;
+}
+#UnlimitedSupport p {
+  text-align: left;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+}
+#Pricing {
+  width: 90%;
+  margin: 90px auto 40px;
+}
+#Pricing h3 {
+  text-align: left;
+  font-weight: 500;
+}
+#Pricing h3 a {
+  text-decoration: underline;
+}
+.left_box {
+  float: left;
+  width: 40%;
+}
+.left_box .red_bg {
+  background-color: #DF1E2B;
+  color: #ffffff;
+  padding: 15px 10px 10px 30px;
+  font-size: 21px;
+}
+.left_box h3 {
+  margin: 20px;
+}
+.left_box ul {
+  margin: 0 20px 20px 40px;
+}
+.left_box li {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 500;
+  color: #86898b;
+}
+.bold {
+  font-weight: 700;
+  font-size: 23px;
+}
+.left_span {
+  float: left;
+  width: 20%;
+}
+.right_span {
+  float: right;
+  width: 80%;
+}
+.right_box {
+  float: right;
+  width: 55%;
+  padding: 20px;
+}
+.right_box .left_span {
+  width: 42%;
+}
+.right_box .right_span {
+  width: 50%;
+}
+.right_box h3 {
+  width: 100%;
+  text-align: center !important;
+}
+.right_box p {
+  font-size: 23px;
+  font-weight: 500;
+}
+.right_box p.small {
+  font-size: 18px;
+  line-height: 22px;
+  text-align: right;
+}
+.right_box p.tiny {
+  float: left;
+  clear: both;
+  width: 100%;
+  margin: 30px 0 0;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  color: #86898b;
+}
+.right_box .equiv {
+  font-weight: 400;
+}
+.right_box#TryOverLunch p {
+  font-size: 19px;
+  line-height: 27px;
+}
+#SpecialOffer,
+#PriceComparison {
+  margin-top: 40px;
+}
+#PricingCTA {
+  float: left;
+  clear: both;
+  width: 100%;
+  margin: 60px 0 20px;
+}
+#PricingCTA h3 {
+  text-align: center;
+}
+#PricingCTA .button {
+  margin: 30px auto 0;
+}
+#AboutUs {
+  border-top: 2px solid #0097F5;
+}
+#AboutUs h1 {
+  font-size: 34px;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+.team_member,
+.ampersand,
+#AboutBlurb,
+#PressBox {
+  float: left;
+}
+.team_member {
+  width: 25%;
+}
+.team_member img {
+  display: block;
+  margin: 0 auto;
+}
+.team_member h4 {
+  font-size: 20px;
+  line-height: 24px;
+  margin-top: 20px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  text-align: center;
+}
+.team_member p {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 500;
+  text-align: center;
+  margin: 0;
+}
+#Jordan {
+  margin-left: 8.5%;
+}
+#Micah {
+  margin-left: 4%;
+}
+#Ryan {
+  margin-left: 0%;
+}
+.ampersand {
+  width: 4%;
+  font-size: 56px;
+  line-height: 190px;
+  text-align: center;
+  font-family: 'baskerville', serif;
+  font-style: italic;
+}
+#AboutBlurb {
+  clear: left;
+  width: 83%;
+  margin: 30px 8.5%;
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 27px;
+}
+#PressBox {
+  clear: left;
+}
+/*
+*	Widescreen Stylesheet: ~1280px wide (proportional). 
+*	Will display in viewports greater than or equal to 1080px wide.
+*	Inherits desktop styles.
+*/
+@media screen and (min-width: 68em) {
+  
+}
+/*
+*	Tablet Stylesheet: ~768px wide (proportional). 
+*	Will display in viewports between 768px and 1023px wide.
+*	Inherits desktop styles.
+*/
+@media only screen and (max-width: 63.9em) {
+  
+}
+/*
+*	Phone Stylesheet: ~320px wide (proportional). 
+*	Will display in viewports less than 768px wide.
+*	Inherits desktop and tablet styles.
+*/
+/* phone and 7" tablet styles */
+@media only screen and (max-width: 47.9em) {
+  
+}

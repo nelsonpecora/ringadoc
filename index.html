@@ -12,262 +12,273 @@
     <meta http-equiv="Content-Language" content="en" />
 
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/internal/css/styles.css" />
+    <script type="text/javascript" src="/external/js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="/internal/js/scripts.js"></script>
 </head>
-<body class="clearfix">
+<body>
     <div class="header_bg"></div>
-    <div class="wrap">
-        <section class="page_header">
-            <header>
-                <div class="page_logo"><a href="/" title="Ringadoc"><img src="main_logo.png" /></a></div>
-                <div class="login_link"><a href="/login">Log In</a></div>
-            </header>
-            <div class="header_blurb">
+    <section class="page_header">
+        <header class="clearfix">
+            <div class="page_logo"><a href="/" title="Ringadoc"><img src="/internal/img/headerlogo.png" /></a></div>
+            <div class="login_link"><a href="/login">Log In</a></div>
+        </header>
+        <div class="header_blurb clearfix">
+            <div class="header_blurb_left">
                 <h1>A better answering service for a fraction of the price</h1>
-                <p class="small">Access &amp; respond to your after hours messages from any device, instantly.</p>
-                <div class="button" id="TryRingadoc"><a href="/try" title="Try Ringadoc for Free">Try Ringadoc for Free</a></div>
+                <p>Access <span class="baskerville">&amp;</span> respond to your after hours messages from any device, instantly.</p>
             </div>
-            <div class="popover" id="VideoLink">
-                <div class="red_banner">Starting at $49</div>
-                <p>See how Ringadoc simplifies after hours communication</p>
-                <div class="button" id="WatchVideo"><a title="Watch the Video"><span class="play_button">&#9658;</span> Watch the Video</a></div>
-            </div>
-        </section>
-        <section class="white_bg" id="HappyPatients">
-            <h4>We have hundreds of practices using the service, representing over 500,000 happy patients.</h4>
-            <img src="" alt="Smiling Patients" />
-            <div class="quote">"Ringadoc's answering service is truly an innovation for on-call docs. It is easy to use, less intrusive, and I don't get charged per phone call like my old service; it just makes good business sense for a busy practice."</div>
-            <div class="quote_attrib">Dr. Susan V. from Oregon</div>
-        </section>
-        <section id="Features">
-            <header id="FeaturesHeader"><h2>Replace your old answering service with something surprisingly better.</h2></header>
-            <section class="feature" id="MobileApp">
-                <img src="" alt="Mobile App Screenshot" />
-                <div class="feature_desc">
-                    <h3>Check your messages like your email with our mobile app for Android &amp; iPhone</h3>
-                    <p class="grey_text">Sign up & take your answering service with you.</p>
-                    <div class="button" id="SignUp"><a title="Sign Up">Sign Up</a></div>
-                </div>
-            </section>
-            <section class="feature" id="DesktopApp">
-                <img src="" alt="Desktop Screenshot" />
-                <div class="feature_desc">
-                    <h3>A faster way for office staff to handle non-urgent messages.</h3>
-                    <p class="grey_text">Signing up gives your office a centralized place to visualize &amp; prioritize messages from any device. Allow your staff to focus on calls about appointments scheduling or prescription refill requests.</p>
-                </div>
-            </section>
-            <section class="feature" id="PhoneCall">
-                <img src="" alt="Ringadoc Phone" />
-                <div class="feature_desc">
-                    <h3>Change nothing.</h3>
-                    <p class="grey_text">Keep your existing workflow. Patients call the same number. We built Ringadoc with you in mind.</p>
-                </div>
-            </section>
-        </section> <!-- end features -->
-        <section class="bordered_section" id="SetupIsEasy">
-            <h2>Setup is easy ­- Can be done in as little as 10 minutes from start to finish!</h2>
-            <div class="thin">
-                <h3><a href="/sign-up">Sign up here</a> or call (415.735.4303)</h3>
-                <h3>Record Greeting</h3>
-                <h3>Verify Call Forwarding</h3>
-                <img src="" alt="Clock" />
-                <p class="small">The Ringadoc Answering Service was designed to drop into any office and replace the previous after hour's setup. The only change you need to make is what phone number you forward to when you close the office. If you're not currently forwarding your after hours calls, you can start with Ringadoc!</p>
-            </div>
-        </section>
-        <section id="PlaybackOptions">
-            <section class="thin">
-                <h2>Playback messages in their entirety from any device.</h2>
-                <p class="grey_text">Caller records message. Then it is sent to your device for you & your staff to hear. You get the whole message every time without worrying an agent missed something.</p>
-                <img src="" alt="Playback Options" />
-            </section>
-            <section id="RespondAccordingly">
-                <h2>Respond Accordingly</h2>
-                <p class="grey_text">Three options to handle your call from any device. No more hours of "phone tag."</p>
-                <table class="table_simple" id="ResponseTable">
-                    <tr>
-                        <th>Call Back</th>
-                        <th>Send a Message</th>
-                        <th>Forward to Office</th>
-                    </tr>
-                    <tr>
-                        <td>Urgent? Call back now.</td>
-                        <td>Send a quick response.</td>
-                        <td>Not urgent? Send to staff.</td>
-                    </tr>
-                    <tr>
-                        <td>Instantly connects you back to caller.</td>
-                        <td>This is what they need to do. Record a response &amp; send.</td>
-                        <td>Have staff take care of it during office hours.</td>
-                    </tr>
-                </table>
-            </section>
-        </section>
-        <section id="Features2">
-            <h2>Ringadoc Features</h2>
-            <p class="grey_text small">For you &amp; your staff</p>
-            <div class="table_img_wrap">
-                <img src="" class="table_img" alt="Standard Phone" />
-                <p class="grey_text small">Standard Phone</p>
-            </div>
-            <div class="table_img_wrap">
-                <img src="" class="table_img" alt="Mobile App" />
-                <p class="grey_text small">Mobile App</p>
-            </div>
-            <div class="table_img_wrap">
-                <img src="" class="table_img" alt="Web" />
-                <p class="grey_text small">Web</p>
-            </div>
-            <table class="alternating_table" id="FeaturesTable">
-                <tr>
-                    <td>Message playback</td>
-                    <td><img src="check" alt="Feature Supported" /></td>
-                    <td><img src="check" alt="Feature Supported" /></td>
-                    <td><img src="check" alt="Feature Supported" /></td>
-                </tr>
-                <tr>
-                    <td>Control your forwarding number</td>
-                    <td><img src="check" alt="Feature Supported" /></td>
-                    <td><img src="check" alt="Feature Supported" /></td>
-                    <td><img src="check" alt="Feature Supported" /></td>
-                </tr>
-                <tr>
-                    <td>Adjust on call calendar</td>
-                    <td></td>
-                    <td><img src="check" alt="Feature Supported" /></td>
-                    <td><img src="check" alt="Feature Supported" /></td>
-                </tr>
-                <tr>
-                    <td>Manage backup providers</td>
-                    <td></td>
-                    <td><img src="check" alt="Feature Supported" /></td>
-                    <td><img src="check" alt="Feature Supported" /></td>
-                </tr>
-                <tr>
-                    <td>Respond by calling back</td>
-                    <td><img src="check" alt="Feature Supported" /></td>
-                    <td><img src="check" alt="Feature Supported" /></td>
-                    <td><img src="check" alt="Feature Supported" /></td>
-                </tr>
-                <tr>
-                    <td>Respond by sending recorded message</td>
-                    <td><img src="check" alt="Feature Supported" /></td>
-                    <td><img src="check" alt="Feature Supported" /></td>
-                    <td><img src="check" alt="Feature Supported" /></td>
-                </tr>
-                <tr>
-                    <td>Respond by forwarding non-urgent messages to office</td>
-                    <td><img src="check" alt="Feature Supported" /></td>
-                    <td><img src="check" alt="Feature Supported" /></td>
-                    <td><img src="check" alt="Feature Supported" /></td>
-                </tr>
-                <tr>
-                    <td>Dismiss irrelevant messages</td>
-                    <td><img src="check" alt="Feature Supported" /></td>
-                    <td><img src="check" alt="Feature Supported" /></td>
-                    <td><img src="check" alt="Feature Supported" /></td>
-                </tr>
-                <tr>
-                    <td>Add voice notes to after hours messages</td>
-                    <td><img src="check" alt="Feature Supported" /></td>
-                    <td><img src="check" alt="Feature Supported" /></td>
-                    <td><img src="check" alt="Feature Supported" /></td>
-                </tr>
-                <tr>
-                    <td>Add cross coverage provider</td>
-                    <td></td>
-                    <td><img src="check" alt="Feature Supported" /></td>
-                    <td><img src="check" alt="Feature Supported" /></td>
-                </tr>
-            </table>
-            <section id="UnlimitedSupport">
-                <h3>Unlimited Free Support</h3>
-                <p class="grey_text">Ringadoc will assign an account manager to your account. You'll have their personal email and phone number. Ringadoc guarantees support during business hours on Pacific Standard Time.<br />For emergencies, there is a support number you can call. 415.630.4890</p>
-            </section>
-        </section>
-        <section id="Pricing">
-            <h2 class="uppercase">Pricing</h2>
-            <h3>Feature updates, unlimited support and more &mdash; for free.</h3>
-            <h3><a href="/sign-up" title="Get Started">Get started now & signup for your one month free trial.</a></h3>
-            <div class="white_bg left_box" id="SpecialOffer">
-                <div class="red_bg">
-                    <p class="left_span">$<span class="huge">50</span></p>
-                    <p class="right_span"><span class="bold">First Month Free</span><br />PER OFFICE PER MONTH AFTER</p>
-                </div>
-                <h3>For doctors offices</h3>
-                <ul class="grey_text small">
-                    <li>First Month Free</li>
-                    <li>No setup fees, upgrade fees, or contracts</li>
-                    <li>Unlimited customer support</li>
-                    <li>Unlimited calls &amp; messages</li>
-                    <li>Access anywhere online</li>
-                    <li>Pay by credit card</li>
-                    <li>Cancel any time</li>
-                </ul>
-            </div>
-            <div class="white_bg right_box" id="PriceComparison">
-                <div class="left_span">
-                    <h3>Ringadoc</h3>
-                    <p>$<span class="huge">50</span> YEARLY</p>
-                    <p class="small" id="TrialSubtext">(small monthly fee)</p>
-                </div>
-                <div class="right_span">
-                    <h3>Competitors</h3>
-                    <p><span class="huge">&asymp;</span> $<span class="huge">3,600</span> YEARLY</p>
-                </div>
-                <p class="grey_text tiny">Handle your patient calls more efficiently.</p>
-            </div>
-            <div class="right_box" id="TryOverLunch"><p class="small">We have hundreds of practices representing over 500,000 happy patients. You do not have to stop your current answering service to try Ringadoc answering service. It takes 10 minutes to set up. Try us over lunch.</p></div>
-            <div id="PricingCTA">
-                <h3>First Month Free trial, get started today.</h3>
+            <div class="button" id="TryRingadoc"><a href="/try" title="Try Ringadoc for Free">Try Ringadoc for Free</a></div>
+        </div>
+        <div class="popover" id="VideoLink">
+            <div class="red_banner">Starting at $49</div>
+            <p>See how Ringadoc simplifies after hours communication</p>
+            <div class="button" id="WatchVideo"><a title="Watch the Video"><span class="play_button">&#9658;</span> Watch the Video</a></div>
+        </div>
+    </section>
+    <section class="white_bg clearfix" id="HappyPatients">
+        <h3>We have hundreds of practices using the service, representing over 500,000 happy patients.</h3>
+        <img src="/internal/img/users.png" alt="Smiling Patients" />
+        <div class="quote">"Ringadoc's answering service is truly an innovation for on-call docs. It is easy to use, less intrusive, and I don't get charged per phone call like my old service; it just makes good business sense for a busy practice."</div>
+        <div class="quote_attrib">Dr. Susan V. from Oregon</div>
+    </section>
+    <section class="clearfix" id="Features">
+        <header id="FeaturesHeader"><h2>Replace your old answering service with something surprisingly better.</h2></header>
+        <section class="feature clearfix" id="MobileApp">
+            <img src="/internal/img/platform1.png" alt="Mobile App Screenshot" />
+            <div class="feature_desc">
+                <h2>Check your messages like your email with our mobile app for Android &amp; iPhone</h2>
+                <p class="grey_text">Sign up & take your answering service with you.</p>
                 <div class="button" id="SignUp"><a title="Sign Up">Sign Up</a></div>
             </div>
         </section>
-        <section class="white_bg" id="AboutUs">
-            <h2 class="bold">About</h2>
-            <div class="team_member" id="Jordan">
-                <img src="" alt="Jordan Michaels" />
-                <h4>Jordan Michaels</h4>
-                <p>CEO, Co-Founder</p>
-            </div>
-            <div class="team_member" id="Micah">
-                <img src="" alt="Micah Grossman" />
-                <h4>Micah Grossman</h4>
-                <p>Co-Founder</p>
-            </div>
-            <div class="ampersand">&amp;</div>
-            <div class="team_member" id="Ryan">
-                <img src="" alt="Ryan Howard" />
-                <h4>Ryan Howard</h4>
-                <p>Board of Directors</p>
-            </div>
-            <div id="AboutBlurb"><p>Ringadoc is backed by FF Angel (fbFund, Twilio, and Path) and Ryan Howard (the founder of industry crushing electronic health records firm Practice Fustion), along with other visionary investors.</p></div>
-            <div class="PressBox">
-                <h5>PRESS</h5> <!-- horizontal line is made with :before pseudoclass -->
-                <div class="press_item"><a href="" title="TechChrunch"><img src="" alt="TechCrunch" /></a></div>
-                <div class="press_item"><a href="" title="Fast Company"><img src="" alt="Fast Company" /></a></div>
-                <div class="press_item"><a href="" title="Forbes"><img src="" alt="Forbes" /></a></div>
+        <section class="feature clearfix" id="DesktopApp">
+            <img src="/internal/img/platform2.png" alt="Desktop Screenshot" />
+            <div class="feature_desc">
+                <h2>A faster way for office staff to handle non-urgent messages.</h2>
+                <p class="grey_text">Signing up gives your office a centralized place to visualize &amp; prioritize messages from any device. Allow your staff to focus on calls about appointments scheduling or prescription refill requests.</p>
             </div>
         </section>
-        <footer class="white_bg" id="PageFooter">
-            <img src="" alt="Ringadoc Logo" />
-            <p class="darkgrey_text" id="FooterMainLinks">
-                <a href="/about" title="About">About</a>
-                <a href="/contact" title="Contact">Contact</a>
-                <a href="/jobs" title="Jobs">Jobs</a>
-                <a href="/press" title="Press">Press</a>
-            </p>
-            <p id="FooterSupport">Support 415.735.4303</p>
-            <a href="facebook" title="Facebook"><img src="" alt="Facebook" /></a>
-            <a href="twitter" title="Twitter"><img src="" alt="Twitter" /></a>
-            <p class="grey_text" id="FooterSecondaryLinks">
-                <a href="/faq" title="Doctors FAQ">Doctors FAQ</a>
-                <a href="/blog" title="Blog">Blog</a>
-                <a href="/partners" title="Partners">Partners</a>
-                <a href="/disclaimers" title="Disclaimers">Disclaimers</a>
-                <a href="/terms" title="Terms &amp; Conditions">Terms &amp; Conditions</a>
-            </p>
-            <p class="copyright">&copy; 2013 Telethrive, Inc. All rights reserved</p>
-        </footer>
-    </div>
+        <section class="feature clearfix" id="PhoneCall">
+            <img src="/internal/img/platform3.png" alt="Ringadoc Phone" />
+            <div class="feature_desc">
+                <h2>Change nothing.</h2>
+                <p class="grey_text">Keep your existing workflow. Patients call the same number. We built Ringadoc with you in mind.</p>
+            </div>
+        </section>
+    </section> <!-- end features -->
+    <section class="bordered_section" id="SetupIsEasy">
+        <h2>Setup is easy ­- Can be done in as little as 10 minutes from start to finish!</h2>
+        <div class="thin clearfix">
+            <div class="flex_left">
+                <h3><a href="/sign-up">Sign up here</a> or call (415.735.4303)</h3>
+                <h3>Record Greeting</h3>
+                <h3>Verify Call Forwarding</h3>
+            </div>
+            <img src="/internal/img/clock.png" alt="Clock" />
+        </div>
+        <p>The Ringadoc Answering Service was designed to drop into any office and replace the previous after hour's setup. The only change you need to make is what phone number you forward to when you close the office. If you're not currently forwarding your after hours calls, you can start with Ringadoc!</p>
+    </section>
+    <section id="PlaybackOptions">
+        <section class="thin">
+            <h2>Playback messages in their entirety from any device.</h2>
+            <p class="grey_text">Caller records message. Then it is sent to your device for you & your staff to hear. You get the whole message every time without worrying an agent missed something.</p>
+            <img src="/internal/img/playback.png" alt="Playback Options" />
+        </section>
+        <section id="RespondAccordingly">
+            <h2>Respond Accordingly</h2>
+            <p class="grey_text">Three options to handle your call from any device. No more hours of "phone tag."</p>
+            <table class="table_simple" id="ResponseTable">
+                <tr>
+                    <th>Call Back</th>
+                    <th>Send a Message</th>
+                    <th>Forward to Office</th>
+                </tr>
+                <tr>
+                    <td>Urgent? Call back now.</td>
+                    <td>Send a quick response.</td>
+                    <td>Not urgent? Send to staff.</td>
+                </tr>
+                <tr>
+                    <td>Instantly connects you back to caller.</td>
+                    <td>This is what they need to do. Record a response &amp; send.</td>
+                    <td>Have staff take care of it during office hours.</td>
+                </tr>
+            </table>
+        </section>
+    </section>
+    <section id="Features2">
+        <div class="features2_top_wrap clearfix">
+            <div class="features2_header">
+                <h2>Ringadoc Features</h2>
+                <p class="grey_text small">For you &amp; your staff</p>
+            </div>
+            <div class="table_img_wrap" id="PhoneImgWrap">
+                <img src="/internal/img/phone.png" class="table_img" alt="Standard Phone" />
+                <p class="grey_text small">Standard Phone</p>
+            </div>
+            <div class="table_img_wrap" id="MobileImgWrap">
+                <img src="/internal/img/cellphone.png" class="table_img" alt="Mobile App" />
+                <p class="grey_text small">Mobile App</p>
+            </div>
+            <div class="table_img_wrap" id="MonitorImgWrap">
+                <img src="/internal/img/monitor.png" class="table_img" alt="Web" />
+                <p class="grey_text small">Web</p>
+            </div>
+        </div>
+        <table class="alternating_table" id="FeaturesTable">
+            <tr>
+                <td>Message playback</td>
+                <td><img src="/internal/img/features_checkmark.png" alt="Feature Supported" /></td>
+                <td><img src="/internal/img/features_checkmark.png" alt="Feature Supported" /></td>
+                <td><img src="/internal/img/features_checkmark.png" alt="Feature Supported" /></td>
+            </tr>
+            <tr>
+                <td>Control your forwarding number</td>
+                <td><img src="/internal/img/features_checkmark.png" alt="Feature Supported" /></td>
+                <td><img src="/internal/img/features_checkmark.png" alt="Feature Supported" /></td>
+                <td><img src="/internal/img/features_checkmark.png" alt="Feature Supported" /></td>
+            </tr>
+            <tr>
+                <td>Adjust on call calendar</td>
+                <td></td>
+                <td><img src="/internal/img/features_checkmark.png" alt="Feature Supported" /></td>
+                <td><img src="/internal/img/features_checkmark.png" alt="Feature Supported" /></td>
+            </tr>
+            <tr>
+                <td>Manage backup providers</td>
+                <td></td>
+                <td><img src="/internal/img/features_checkmark.png" alt="Feature Supported" /></td>
+                <td><img src="/internal/img/features_checkmark.png" alt="Feature Supported" /></td>
+            </tr>
+            <tr>
+                <td>Respond by calling back</td>
+                <td><img src="/internal/img/features_checkmark.png" alt="Feature Supported" /></td>
+                <td><img src="/internal/img/features_checkmark.png" alt="Feature Supported" /></td>
+                <td><img src="/internal/img/features_checkmark.png" alt="Feature Supported" /></td>
+            </tr>
+            <tr>
+                <td>Respond by sending recorded message</td>
+                <td><img src="/internal/img/features_checkmark.png" alt="Feature Supported" /></td>
+                <td><img src="/internal/img/features_checkmark.png" alt="Feature Supported" /></td>
+                <td><img src="/internal/img/features_checkmark.png" alt="Feature Supported" /></td>
+            </tr>
+            <tr>
+                <td>Respond by forwarding non-urgent messages to office</td>
+                <td><img src="/internal/img/features_checkmark.png" alt="Feature Supported" /></td>
+                <td><img src="/internal/img/features_checkmark.png" alt="Feature Supported" /></td>
+                <td><img src="/internal/img/features_checkmark.png" alt="Feature Supported" /></td>
+            </tr>
+            <tr>
+                <td>Dismiss irrelevant messages</td>
+                <td><img src="/internal/img/features_checkmark.png" alt="Feature Supported" /></td>
+                <td><img src="/internal/img/features_checkmark.png" alt="Feature Supported" /></td>
+                <td><img src="/internal/img/features_checkmark.png" alt="Feature Supported" /></td>
+            </tr>
+            <tr>
+                <td>Add voice notes to after hours messages</td>
+                <td><img src="/internal/img/features_checkmark.png" alt="Feature Supported" /></td>
+                <td><img src="/internal/img/features_checkmark.png" alt="Feature Supported" /></td>
+                <td><img src="/internal/img/features_checkmark.png" alt="Feature Supported" /></td>
+            </tr>
+            <tr>
+                <td>Add cross coverage provider</td>
+                <td></td>
+                <td><img src="/internal/img/features_checkmark.png" alt="Feature Supported" /></td>
+                <td><img src="/internal/img/features_checkmark.png" alt="Feature Supported" /></td>
+            </tr>
+        </table>
+        <section id="UnlimitedSupport">
+            <h3>Unlimited Free Support</h3>
+            <p class="grey_text">Ringadoc will assign an account manager to your account. You'll have their personal email and phone number. Ringadoc guarantees support during business hours on Pacific Standard Time.<br />For emergencies, there is a support number you can call. 415.630.4890</p>
+        </section>
+    </section>
+    <section class="clearfix" id="Pricing">
+        <h2 class="uppercase">Pricing</h2>
+        <h3>Feature updates, unlimited support and more &mdash; for free.</h3>
+        <h3><a href="/sign-up" title="Get Started">Get started now & signup for your one month free trial.</a></h3>
+        <div class="white_bg left_box clearfix" id="SpecialOffer">
+            <div class="red_bg clearfix">
+                <p class="left_span">$ <span class="huge">50</span></p>
+                <p class="right_span"><span class="bold">First Month Free</span><br />PER OFFICE PER MONTH AFTER</p>
+            </div>
+            <h3>For doctors offices</h3>
+            <ul class="grey_text">
+                <li>First Month Free</li>
+                <li>No setup fees, upgrade fees, or contracts</li>
+                <li>Unlimited customer support</li>
+                <li>Unlimited calls &amp; messages</li>
+                <li>Access anywhere online</li>
+                <li>Pay by credit card</li>
+                <li>Cancel any time</li>
+            </ul>
+        </div>
+        <div class="white_bg right_box clearfix" id="PriceComparison">
+            <div class="left_span">
+                <h3>Ringadoc</h3>
+                <p> $<span class="huge">550</span> YEARLY</p>
+                <p class="small" id="TrialSubtext">(trial monthly fee)</p>
+            </div>
+            <div class="right_span">
+                <h3>Competitors</h3>
+                <p><span class="huge equiv">&asymp;</span> $ <span class="huge">3,600</span> YEARLY</p>
+            </div>
+            <p class="grey_text tiny">Handle your patient calls more efficiently.</p>
+        </div>
+        <div class="right_box" id="TryOverLunch"><p>We have hundreds of practices representing over 500,000 happy patients. You do not have to stop your current answering service to try Ringadoc answering service. It takes 10 minutes to set up. Try us over lunch.</p></div>
+        <div id="PricingCTA">
+            <h3>First Month Free trial, get started today.</h3>
+            <div class="button" id="SignUp"><a title="Sign Up">Sign Up</a></div>
+        </div>
+    </section>
+    <section class="white_bg clearfix" id="AboutUs">
+        <h1 class="bold">About</h1>
+        <div class="team_member" id="Jordan">
+            <img src="/internal/img/footer_founder1.png" alt="Jordan Michaels" />
+            <h4>Jordan Michaels</h4>
+            <p>CEO, Co-Founder</p>
+        </div>
+        <div class="team_member" id="Micah">
+            <img src="/internal/img/footer_founder2.png" alt="Micah Grossman" />
+            <h4>Micah Grossman</h4>
+            <p>Co-Founder</p>
+        </div>
+        <div class="ampersand">&amp;</div>
+        <div class="team_member" id="Ryan">
+            <img src="/internal/img/footer_founder3.png" alt="Ryan Howard" />
+            <h4>Ryan Howard</h4>
+            <p>Board of Directors</p>
+        </div>
+        <div id="AboutBlurb"><p>Ringadoc is backed by FF Angel (fbFund, Twilio, and Path) and Ryan Howard (the founder of industry crushing electronic health records firm Practice Fustion), along with other visionary investors.</p></div>
+        <div id="PressBox">
+            <h5>PRESS</h5> <!-- horizontal line is made with :before pseudoclass -->
+            <div class="press_item"><a href="" title="TechChrunch"><img src="/internal/img/techcrunch_logo.png" alt="TechCrunch" /></a></div>
+            <div class="press_item"><a href="" title="Fast Company"><img src="/internal/img/fastcompany_logo.png" alt="Fast Company" /></a></div>
+            <div class="press_item"><a href="" title="Forbes"><img src="/internal/img/forbes_logo.png" alt="Forbes" /></a></div>
+        </div>
+    </section>
+    <footer class="white_bg" id="PageFooter">
+        <img src="/internal/img/footerlogo.png" alt="Ringadoc Logo" />
+        <p class="darkgrey_text" id="FooterMainLinks">
+            <a href="/about" title="About">About</a>
+            <a href="/contact" title="Contact">Contact</a>
+            <a href="/jobs" title="Jobs">Jobs</a>
+            <a href="/press" title="Press">Press</a>
+        </p>
+        <p id="FooterSupport">Support 415.735.4303</p>
+        <a href="facebook" title="Facebook"><img src="/internal/img/footer_facebook.png" alt="Facebook" /></a>
+        <a href="twitter" title="Twitter"><img src="/internal/img/footer_twitter.png" alt="Twitter" /></a>
+        <p class="grey_text" id="FooterSecondaryLinks">
+            <a href="/faq" title="Doctors FAQ">Doctors FAQ</a>
+            <a href="/blog" title="Blog">Blog</a>
+            <a href="/partners" title="Partners">Partners</a>
+            <a href="/disclaimers" title="Disclaimers">Disclaimers</a>
+            <a href="/terms" title="Terms &amp; Conditions">Terms &amp; Conditions</a>
+        </p>
+        <p class="copyright">&copy; 2013 Telethrive, Inc. All rights reserved</p>
+    </footer>
 </body>
 </html>
 

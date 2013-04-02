@@ -1,21 +1,28 @@
 /* Default Color, Type, Selection, Image, Form, and Link Styles */
 
+/* import fonts */
+/*
+@font-face {
+	font-family: 'Agenda';
+	font-weight: 500;
+	src: url('/external/fonts/Agenda\ Medium.TTF');
+}
+@font-face {
+	font-family: 'Agenda';
+	font-weight: 700;
+	src: url('/external/fonts/Agenda\ Bold.TTF');
+} */
+
 /* Color Presets */
 
-@txtcolor: #454545; //base text color
-@lightgrey: #4f4f4f;
-@green: #08C;
-@darkgreen: #005783;
-@white: #fff; //white color for stuff
-//@green: #5d9644; //busker green
-//@green: #377B18;
-@green: #1a8b55;
-@darkgreen: #316A16;
-//@darkgreen: #487435;
-@white: #eee; //off-white
+@txtcolor: #222; //base text color
+@lightgrey: #e9e8e7;
+@grey: #ddd;
+@darkgrey: #555656;
+@white: #fff;
 @red: #BC2929;
 @darkred: #6B1616;
-@lightblue: #08c;
+@lightblue: #2C9CE6;
 @darkblue: #00699E;
 
 /* Selection and tap colors */
@@ -39,74 +46,72 @@ h1, h2, h3, h4 {
 	text-rendering: optimizelegibility;
 }
 
-.huge, h1 {
-	font-size: 36px;
+.huge {
+	font-size: 50px;
+	line-height: 60px;
+	font-weight: 500;
+}
+
+h1 {
+	font-size: 30px;
 	line-height: 40px;
-	font-weight: 500;
-	color: @lightgrey;
+	font-weight: 600;
+	margin: 10px 0;
 }
 
-.large, h2 {
-	font-size: 18px;
-	line-height: 20px;
+h2 {
+	font-size: 34px;
+	line-height: 40px;
 	font-weight: 600;
 }
 
-.bigger, h3 {
-	font-size: 16px;
-	line-height: 20px;
+h3 {
+	font-size: 22px;
+	line-height: 27px;
 	font-weight: 600;
+	text-align: center;
 }
 
-.big, h4 {
-	font-size: 16px;
-	line-height: 20px;
+h4 {
+	font-size: 14px;
+	line-height: 18px;
 	font-weight: 500;
-	color: @lightgrey;
 }
 
 body {
-	font: 14px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font: 18px/26px 'Source Sans Pro', "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 300;
 	color: @txtcolor;
 }
 
-.small, small {
+.small {
 	font-size: 12px;
-	line-height: 18px;
+	line-height: 16px;
 	font-weight: 400;
 }
 
-/* colored text */
-.whitetext {
-	color: @white;
-}
-
-.greentext {
-	color: @green;
-}
-
-.artist {
+.baskerville {
+	font-family: 'Baskerville', serif;
 	font-style: italic;
+	font-size: 110%;
 }
 
-.tags {
-	color: #999;
-	font-style: italic;
-	font-weight: 300;
-	a {
-		color: #999 !important;
-		&:hover { color: @green !important; }
-	}
-	
+.grey_text {
+	color: @darkgrey;
+}
+.darkgrey_text {
+	color: @darkgrey;
 }
 
-a, a:active, a:visited, a:hover {
-	color: @green;
+a, a:active, a:visited {
+	color: @lightblue;
 	text-decoration: none;
 	cursor: pointer;
+	.transition(color 150ms);
 }
 a:hover {
-	color: @darkgreen;
+	color: @darkblue;
+	.transition(color 250ms);
 }
 
 img {
@@ -114,56 +119,4 @@ img {
 	max-width: 100%;
 	vertical-align: middle;
 	border: 0;
-}
-
-
-/* Form Presets */
-
-button, input, select, textarea {
-	vertical-align: middle;
-}
-
-button, input[type="button"], input[type="reset"], input[type="submit"] {
-	cursor: pointer;
-	-webkit-appearance: button;
-}
-
-label, input, button, select, textarea {
-	font-size: 14px;
-	font-weight: normal;
-	line-height: 20px;
-}
-
-select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
-	display: inline-block;
-	height: 20px;
-	padding: 4px 6px;
-	margin-bottom: 9px;
-	font-size: 14px;
-	line-height: 20px;
-	color: #555;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-}
-
-textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
-	background-color: white;
-	border: 1px solid #CCC;
-	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-	-webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
-	-moz-transition: border linear 0.2s, box-shadow linear 0.2s;
-	-o-transition: border linear 0.2s, box-shadow linear 0.2s;
-	transition: border linear 0.2s, box-shadow linear 0.2s;
-}
-
-input, button, select, textarea {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-.hidden {
-	display: none !important;
-	visibility: hidden !important;
 }
