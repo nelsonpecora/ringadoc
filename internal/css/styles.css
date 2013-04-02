@@ -906,6 +906,17 @@ body {
 }
 #PressBox {
   clear: left;
+  float: none;
+  width: 900px;
+  height: 100px;
+  display: block;
+  margin: 40px auto;
+}
+#PageFooter #FooterLogo {
+  display: block;
+  width: 150px;
+  height: 154px;
+  margin: 0 auto;
 }
 /*
 *	Widescreen Stylesheet: ~1280px wide (proportional). 
