@@ -271,9 +271,9 @@ h4 {
   text-rendering: optimizelegibility;
 }
 .huge {
-  font-size: 50px;
+  font-size: 40px;
   line-height: 60px;
-  font-weight: 500;
+  font-weight: 400;
 }
 h1 {
   font-size: 30px;
@@ -313,10 +313,10 @@ body {
   font-size: 110%;
 }
 .grey_text {
-  color: #555656;
+  color: #86898b;
 }
 .darkgrey_text {
-  color: #555656;
+  color: #86898b;
 }
 a,
 a:active,
@@ -417,6 +417,8 @@ body {
   float: right;
   margin-top: 60px;
   text-transform: uppercase;
+  margin-right: 35px;
+  font-size: 14px;
 }
 .page_header .login_link a {
   color: #222222;
@@ -424,7 +426,7 @@ body {
   font-weight: 700;
 }
 .page_header .login_link a:hover {
-  color: #555656;
+  color: #86898b;
 }
 .page_header .header_blurb {
   margin-top: 50px;
@@ -441,6 +443,7 @@ body {
 .page_header .header_blurb .button {
   float: right;
   margin-top: 16px;
+  margin-right: 25px;
 }
 .popover {
   background: url('/internal/img/stage.png') no-repeat center top;
@@ -448,7 +451,7 @@ body {
   width: 100%;
   max-width: 989px;
   max-height: 314px;
-  margin: 30px auto;
+  margin: 30px auto 34px;
   position: relative;
 }
 .popover p {
@@ -457,7 +460,7 @@ body {
   top: 44%;
   left: 4%;
   width: 70%;
-  font-size: 17px;
+  font-size: 19px;
   line-height: 24px;
   font-weight: 500;
 }
@@ -499,19 +502,19 @@ body {
 #HappyPatients img {
   float: left;
   width: 40%;
-  margin: 30px 5% 0;
+  margin: 40px 5% 60px;
 }
 #HappyPatients div {
   float: right;
   width: 45%;
-  margin: 30px 5% 15px 0;
+  margin: 40px 5% 15px 0;
 }
 #HappyPatients div.quote {
   background-color: #EFF2F7;
   border-radius: 10px;
   position: relative;
   padding: 20px;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 22px;
   font-weight: 500;
 }
@@ -528,16 +531,15 @@ body {
   margin-right: 22%;
   clear: right;
   width: auto;
-  color: #dddddd;
+  color: #ccc;
   font-size: 16px;
   line-height: 16px;
 }
 #Features {
   width: 80%;
   max-width: 989px;
-  margin: 40px auto;
+  margin: 40px auto 90px;
   padding: 0 3%;
-  position: auto;
 }
 #Features > h2 {
   float: left;
@@ -545,7 +547,7 @@ body {
 .feature {
   float: left;
   clear: left;
-  margin-top: 40px;
+  margin-top: 10px;
 }
 .feature img {
   float: left;
@@ -557,15 +559,15 @@ body {
   width: 65%;
 }
 .feature h2 {
-  margin-top: 60px;
+  margin-top: 70px;
 }
 .feature p {
-  font-size: 21px;
-  line-height: 27px;
+  font-size: 18px;
+  line-height: 26px;
   margin-top: 20px;
 }
 .feature .button {
-  margin-top: 20px;
+  margin-top: 24px;
 }
 .feature#DesktopApp img {
   width: 45%;
@@ -574,12 +576,15 @@ body {
   width: 55%;
   margin-top: 50px;
 }
+.feature#PhoneCall {
+  margin-top: 14px;
+}
 .feature#PhoneCall img {
   width: 40%;
 }
 .feature#PhoneCall .feature_desc {
   width: 60%;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 .bordered_section {
   border-top: 2px solid #222222;
@@ -590,8 +595,8 @@ body {
   padding: 20px 3%;
 }
 .thin {
-  width: 70%;
-  margin: 20px auto 30px;
+  width: 80%;
+  margin: 40px auto 10px;
 }
 .flex_left {
   float: left;
@@ -620,10 +625,10 @@ body {
 #SetupIsEasy p {
   clear: both;
   width: 80%;
-  margin: 0 auto 40px;
-  font-size: 17px;
-  line-height: 27px;
-  font-weight: 600;
+  margin: 0 auto 50px;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 500;
 }
 #PlaybackOptions {
   width: 80%;
@@ -631,13 +636,14 @@ body {
   margin: 20px auto;
 }
 #PlaybackOptions .thin {
-  width: 92%;
+  width: 78%;
   max-width: 910px;
+  margin-bottom: 20px;
 }
 #PlaybackOptions p {
-  font-size: 21px;
-  line-height: 27px;
-  font-weight: 500;
+  font-size: 19px;
+  line-height: 28px;
+  font-weight: 400;
   margin: 20px 0;
 }
 #PlaybackOptions img {
@@ -650,12 +656,16 @@ body {
 #RespondAccordingly {
   text-align: center;
 }
+#RespondAccordingly p {
+  margin-top: 10px;
+}
 .table_simple {
-  margin: 20px 0;
+  margin: 40px auto;
+  width: 90%;
 }
 .table_simple th {
   background-color: #2c9ce6;
-  font-size: 29px;
+  font-size: 25px;
   line-height: 36px;
   font-weight: 500;
   padding: 4px;
@@ -664,15 +674,17 @@ body {
 .table_simple td {
   background-color: #ffffff;
   font-weight: 500;
-  font-size: 19px;
+  font-size: 18px;
+  font-weight: 400;
   line-height: 25px;
-  padding: 8px;
-  color: #555656;
+  padding: 20px 35px;
+  width: 33%;
+  color: #86898b;
 }
 #Features2 {
   width: 80%;
   max-width: 989px;
-  margin: 40px auto;
+  margin: 85px auto;
 }
 #Features2 .small {
   font-size: 18px;
@@ -680,8 +692,10 @@ body {
   font-weight: 500;
 }
 #Features2 .features2_top_wrap {
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
   position: relative;
+  font-weight: 400;
 }
 #Features2 .features2_header {
   width: 40%;
@@ -691,7 +705,7 @@ body {
   bottom: 0;
 }
 #Features2 .table_img_wrap {
-  width: 18%;
+  width: 19%;
   position: absolute;
   bottom: 0;
   text-align: center;
@@ -704,33 +718,33 @@ body {
   margin-top: 10px;
 }
 #Features2 #PhoneImgWrap {
-  left: 46%;
+  left: 44%;
 }
 #Features2 #MobileImgWrap {
-  left: 64%;
+  left: 62%;
 }
 #Features2 #MonitorImgWrap {
   float: right;
   position: relative;
 }
 .alternating_table {
-  width: 100%;
+  width: 90%;
   margin: 20px auto;
   background-color: #ffffff;
 }
 .alternating_table tr {
   height: 50px;
   line-height: 50px;
-  font-size: 17px;
+  font-size: 16px;
   color: #86898b;
-  font-weight: 500;
+  font-weight: 400;
 }
 .alternating_table tr td {
-  width: 18%;
+  width: 19%;
   text-align: center;
 }
 .alternating_table tr td:first-child {
-  width: 46%;
+  width: 44%;
   padding-left: 20px;
   text-align: left;
 }
@@ -738,25 +752,33 @@ body {
   background-color: #F5F5F5;
 }
 #UnlimitedSupport {
-  width: 90%;
-  margin: 40px auto;
+  width: 80%;
+  margin: 60px auto;
 }
 #UnlimitedSupport h3 {
   text-align: left;
 }
 #UnlimitedSupport p {
   text-align: left;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 18px;
-  line-height: 24px;
+  line-height: 26px;
+  margin-top: 2px;
+}
+.uppercase {
+  text-transform: uppercase;
 }
 #Pricing {
-  width: 90%;
+  width: 80%;
+  max-width: 989px;
   margin: 90px auto 40px;
+}
+#Pricing h2 {
+  margin-bottom: 10px;
 }
 #Pricing h3 {
   text-align: left;
-  font-weight: 500;
+  font-weight: 400;
 }
 #Pricing h3 a {
   text-decoration: underline;
@@ -769,7 +791,7 @@ body {
   background-color: #DF1E2B;
   color: #ffffff;
   padding: 15px 10px 10px 30px;
-  font-size: 21px;
+  font-size: 19px;
 }
 .left_box h3 {
   margin: 20px;
@@ -778,9 +800,9 @@ body {
   margin: 0 20px 20px 40px;
 }
 .left_box li {
-  font-size: 18px;
+  font-size: 17px;
   line-height: 26px;
-  font-weight: 500;
+  font-weight: 400;
   color: #86898b;
 }
 .bold {
@@ -789,16 +811,16 @@ body {
 }
 .left_span {
   float: left;
-  width: 20%;
+  width: 25%;
 }
 .right_span {
   float: right;
-  width: 80%;
+  width: 75%;
 }
 .right_box {
   float: right;
-  width: 55%;
-  padding: 20px;
+  width: 56%;
+  padding: 25px 30px;
 }
 .right_box .left_span {
   width: 42%;
@@ -811,26 +833,31 @@ body {
   text-align: center !important;
 }
 .right_box p {
-  font-size: 23px;
-  font-weight: 500;
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 10px;
 }
 .right_box p.small {
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 17px;
+  line-height: 17px;
   text-align: right;
+  margin-top: 0;
 }
 .right_box p.tiny {
   float: left;
   clear: both;
   width: 100%;
-  margin: 30px 0 0;
-  font-size: 18px;
+  margin: 40px 0 10px;
+  font-size: 17px;
   line-height: 24px;
   text-align: center;
   color: #86898b;
 }
 .right_box .equiv {
   font-weight: 400;
+  font-size: 35px;
+  line-height: 52px;
+  vertical-align: top;
 }
 .right_box#TryOverLunch p {
   font-size: 19px;
@@ -838,13 +865,13 @@ body {
 }
 #SpecialOffer,
 #PriceComparison {
-  margin-top: 40px;
+  margin-top: 45px;
 }
 #PricingCTA {
   float: left;
   clear: both;
   width: 100%;
-  margin: 60px 0 20px;
+  margin: 20px 0 15px;
 }
 #PricingCTA h3 {
   text-align: center;
@@ -858,7 +885,7 @@ body {
 #AboutUs h1 {
   font-size: 34px;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 50px;
   margin-bottom: 30px;
 }
 .team_member,
@@ -868,7 +895,7 @@ body {
   float: left;
 }
 .team_member {
-  width: 25%;
+  width: 20%;
 }
 .team_member img {
   display: block;
@@ -890,7 +917,7 @@ body {
   margin: 0;
 }
 #Jordan {
-  margin-left: 8.5%;
+  margin-left: 16.5%;
 }
 #Micah {
   margin-left: 4%;
@@ -908,9 +935,9 @@ body {
 }
 #AboutBlurb {
   clear: left;
-  width: 83%;
-  margin: 30px 8.5%;
-  font-weight: 500;
+  width: 72%;
+  margin: 30px 14% 40px;
+  font-weight: 400;
   font-size: 19px;
   line-height: 27px;
 }
@@ -922,11 +949,42 @@ body {
   display: block;
   margin: 40px auto;
 }
+#PageFooter {
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
 #PageFooter #FooterLogo {
   display: block;
   width: 150px;
   height: 154px;
   margin: 0 auto;
+}
+#PageFooter p {
+  text-align: center;
+}
+#PageFooter #FooterMainLinks {
+  margin-bottom: 10px;
+}
+#PageFooter #FooterMainLinks a {
+  color: #86898b;
+}
+#PageFooter .footer_img_link {
+  width: 106px;
+  margin: 15px auto;
+}
+#PageFooter .footer_img_link .facebook_link {
+  float: left;
+}
+#PageFooter .footer_img_link .twitter_link {
+  float: right;
+}
+#PageFooter #FooterSecondaryLinks a {
+  color: #86898b;
+  font-weight: 400;
+}
+#PageFooter .copyright {
+  font-size: 12px;
+  margin-top: 10px;
 }
 /*
 *	Widescreen Stylesheet: ~1280px wide (proportional). 
