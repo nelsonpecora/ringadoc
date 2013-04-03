@@ -4,6 +4,250 @@
 *	Inherits desktop styles.
 */
 
-@media only screen and (max-width: 63.9em) {
-
+@media only screen and (max-width: 768px) {
+    .popover {
+        height: 220px;
+        background: #1d41ba; /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPHJhZGlhbEdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzUlIj4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMxZDQxYmEiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDI5OGRlIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L3JhZGlhbEdyYWRpZW50PgogIDxyZWN0IHg9Ii01MCIgeT0iLTUwIiB3aWR0aD0iMTAxIiBoZWlnaHQ9IjEwMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -moz-radial-gradient(center, ellipse cover,  #1d41ba 0%, #0298de 100%); /* FF3.6+ */
+        background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#1d41ba), color-stop(100%,#0298de)); /* Chrome,Safari4+ */
+        background: -webkit-radial-gradient(center, ellipse cover,  #1d41ba 0%,#0298de 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-radial-gradient(center, ellipse cover,  #1d41ba 0%,#0298de 100%); /* Opera 12+ */
+        background: -ms-radial-gradient(center, ellipse cover,  #1d41ba 0%,#0298de 100%); /* IE10+ */
+        background: radial-gradient(ellipse at center,  #1d41ba 0%,#0298de 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1d41ba', endColorstr='#0298de',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+        border: 10px solid rgba(255,255,255,0.7);
+        background-clip: content-box;
+        p {
+            width: 92%;
+            text-align: center;
+        }
+        .button {
+            left: 50%;
+            margin-left: -116px;
+        }
+    }
+    h2 {
+        font-size: 20px;
+        line-height: 28px;
+    }
+    .red_banner {
+        top: 10%;
+        left: -41px;
+    }
+    .feature {
+        margin-top: 20px;
+        h2 {
+            margin-top: 20px;
+        }
+        p {
+            margin-top: 6px;
+        }
+    }
+    #SetupIsEasy .flex_left {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    #SetupIsEasy h3 {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    #SetupIsEasy p {
+        margin-bottom: 20px;
+        line-height: 24px;
+    }
+    #PlaybackOptions p {
+        font-size: 18px;
+        line-height: 26px;
+        margin: 10px 0;
+    }
+    .table_simple {
+        th {
+            font-size: 20px;
+        }
+        td {
+            font-size: 14px;
+            padding: 10px;
+        }
+    }
+    #Features2 .small {
+        font-size: 16px;
+    }
+    .alternating_table tr {
+        line-height: 22px;
+        font-size: 14px;
+    }
+    #HappyPatients {
+        img {
+            float: none;
+            width: 80%;
+            margin: 40px auto 10px;
+            display: block;
+            max-width: 351px;
+        }
+        div {
+            float: none;
+            width: 80%;
+            margin: 40px auto 15px auto;
+            &.quote_attrib {
+                width: 100%;
+                text-align: center;
+                margin: 25px auto 0
+            }
+        }
+    }
 }
+
+@media screen and (max-width: 750px) {
+    .page_header {
+        width: 90%;
+    }
+    .page_header .header_blurb {
+        .header_blurb_left {
+            width: 100%;
+        }
+        .button {
+            float: left;
+            clear: left;
+            margin: 20px 0 0 -116px;
+            left: 50%;
+        }
+    }
+    .red_banner {
+        left: -26px;
+        &:before {
+            border-left: 16px solid transparent;
+        }
+    }
+    .popover p {
+        top: 40%;
+    }
+    #HappyPatients {
+        width: 90%;
+        img, div {
+            width: 90%;
+        }
+    }
+    #Features {
+        width: 90%;
+        padding: 0;
+        margin-bottom: 50px;
+    }
+    .bordered_section {
+        width: 90%;
+    }
+    .thin {
+        margin: 20px auto;
+    }
+    #SetupIsEasy {
+        .flex_left {
+            margin: 0;
+        }
+        img {
+            width: 38%;
+            margin-top: 0;
+        }
+    }
+    #PlaybackOptions {
+        width: 90%;
+        p {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+    #Features2 {
+        width: 90%;
+        .small {
+            font-size: 15px;
+            line-height: 18px;
+        }
+    }
+    #UnlimitedSupport {
+        margin: 40px auto;
+    }
+    #Pricing {
+        width: 90%;
+        h3 {
+            font-size: 18px;
+        }
+    }
+    .left_box {
+        width: 90%;
+        margin: 45px 5% 0;
+        .red_bg {
+            font-size: 17px;
+        }
+        h3 {
+            margin: 20px 20px 10px;
+        }
+    }
+    .huge {
+        font-size: 50px;
+        line-height: 53px;
+    }
+    .right_box {
+        width: 90%;
+        margin: 45px 5% 0;
+        padding: 25px 20px;
+        p.tiny {
+            margin: 20px 0 0;
+        }
+    }
+    #TryOverLunch {
+        padding: 0 20px;
+        p {
+            margin-top: 0;
+        }
+    }
+    #PricingCTA {
+        margin: 35px 0 0;
+    }
+    .team_member {
+        width: 25%;
+        p {
+            font-size: 15px;
+            line-height: 22px;
+            font-weight: 400;
+        }
+    }
+    #Jordan {
+        margin-left: 8.5%;
+    }
+    #Micah {
+        margin-left: 6%;
+    }
+    .ampersand {
+        width: 6%;
+        font-size: 28px;
+        line-height: 80px;
+    }
+    #AboutBlurb {
+        width: 82%;
+        margin: 30px 9% 40px;
+    }
+    #FooterSecondaryLinks {
+        width: 70%;
+        margin-left: 15%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
