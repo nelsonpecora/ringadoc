@@ -119,7 +119,9 @@
 						modalBG.css({'display' : 'none'});	
 					}		
 				}
+				$('iframe#Vimeo').attr('src','');
 				modal.unbind('reveal:close');
+				$('iframe#Vimeo').attr('src','http://player.vimeo.com/video/62954355');
 			});     
    	
 /*---------------------------
